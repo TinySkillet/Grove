@@ -38,7 +38,6 @@ export default function ReadyToGrow() {
         <Image img={xImg} />
         <Image img={pintImg} />
       </div>
-      <Footer />
     </div>
   );
 }

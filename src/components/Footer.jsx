@@ -1,7 +1,7 @@
 import BrandLogo from "./BrandLogo";
 import Button from "./Button";
 
-export default function Footer() {
+export default function Footer({ bg }) {
   const style = {
     boxSizing: "border-box",
     background: "none",
@@ -13,12 +13,14 @@ export default function Footer() {
     padding: ".75rem 9rem .75rem 2.25rem",
     fontWeight: "500",
     color: "white",
-    translateX: "1rem", 
-    fontSize: '.9rem'
+    translateX: "1rem",
+    fontSize: ".9rem",
   };
 
   return (
-    <div className="flex w-full justify-between mt-5 items-center">
+    <div
+      className={"flex w-full justify-between px-44 py-6 items-center " + bg}
+    >
       <div className="flex flex-col gap-6">
         <BrandLogo />
         <p className="font-poppins text-xs text-white">
@@ -29,8 +31,17 @@ export default function Footer() {
         <h1 className="text-white font-poppins capitalize text-xl translate-x-20">
           Sign Up For Updates
         </h1>
-        <label htmlFor="" className="flex justify-center translate-x-16" style={{width: "500px"}}>
-          <input type="text" placeholder="Email Address" style={style} className="focus:outline-none w-full"/>
+        <label
+          htmlFor=""
+          className="flex justify-center translate-x-16"
+          style={{ width: "500px" }}
+        >
+          <input
+            type="text"
+            placeholder="Email Address"
+            style={style}
+            className="focus:outline-none w-full"
+          />
           <div className="z-10 -translate-x-full">
             <Button text="Submit" isPrimary={true} />
           </div>

@@ -3,7 +3,7 @@ import SectionHeader from "./SectionHeader";
 import SubHeading from "./SubHeading";
 import Footer from "./Footer";
 
-export default function LoginForm() {
+export default function RegisterForm() {
   const styles = {
     width: "40rem",
     margin: "auto",
@@ -23,8 +23,9 @@ export default function LoginForm() {
     translateX: "1rem",
     fontSize: ".9rem",
   };
+
   return (
-    <div className="w-full pt-20 px-44 pb-12">
+    <div className="w-full pt-10 px-44 pb-12">
       <div
         style={styles}
         className="flex flex-col items-center border-4 border-dashed px-1 py-12 border-paragraphGreen rounded-3xl"
@@ -35,22 +36,40 @@ export default function LoginForm() {
           classes="font-poppins font-semibold text-paragraphGreen"
         />
         <SubHeading
-          text="Sign in to your account to access the Grove community."
+          text="Create an account to join the Grove community."
           isPrimary={true}
         />
         <input
           type="text"
-          placeholder="Email Address"
+          placeholder="First Name"
           className="focus:outline-none mt-10"
           style={inputStyles}
         />
         <input
           type="text"
+          placeholder="Last Name"
+          className="focus:outline-none mt-5"
+          style={inputStyles}
+        />
+        <input
+          type="text"
+          placeholder="Email Address"
+          className="focus:outline-none mt-5"
+          style={inputStyles}
+        />
+        <input
+          type="password"
           placeholder="Password"
+          className="focus:outline-none mt-5"
+          style={inputStyles}
+        />
+        <input
+          type="password"
+          placeholder="Confirm Password"
           className="focus:outline-none mt-5 mb-10"
           style={inputStyles}
         />
-        <Button text="Log In" isPrimary={true} />
+        <Button text="Register" isPrimary={true} />
       </div>
     </div>
   );

@@ -1,20 +1,19 @@
-import Section1 from "./components/Section1";
-import Section2 from "./components/Section2";
-import Section3 from "./components/Section3";
-import Section4 from "./components/Section4";
-import LoginForm from "./components/LoginForm";
+import { Routes, Route } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage"
 
 import "./App.css";
 
 function App() {
   return (
-   <>
-    <Section1/>
-    <Section2/>
-    <Section3/>
-    <Section4 />
-    {/* <LoginForm/> */}
-   </>
+    <>  
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage/>} />
+      </Routes>
+    </>
   );
 }
 
